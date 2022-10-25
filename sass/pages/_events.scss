@@ -98,6 +98,13 @@
         }
         .btn-primary {
           align-self: flex-start;
+          width: 200px;
+          text-align: center;
+          animation: latidos 1s infinite;
+          @include mixin.notebook() {
+            align-self: center;
+            width: 100%;
+          }
         }
       }
     }
@@ -106,5 +113,17 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 50px 4em;
     }
+  }
+}
+
+@keyframes latidos {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: none;
   }
 }

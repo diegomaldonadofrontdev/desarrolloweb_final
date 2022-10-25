@@ -62,3 +62,4 @@ numbers.forEach((counter) => {
   };
   updateCounter();
 });
+/* Fin lógica del contador */
