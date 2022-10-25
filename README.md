@@ -24,6 +24,6 @@ Html, Css, Sass y JavaScript.
 
 ![Logo_DiegoMaldonadoCode](https://user-images.githubusercontent.com/108159490/197891015-90df4ed0-b20b-4898-a9ef-1dc196e909a2.png)
 
-** Desarrollado Por Diego Maldonado **
+**Desarrollado Por Diego Maldonado**
 
 
