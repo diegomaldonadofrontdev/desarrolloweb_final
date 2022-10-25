@@ -1,0 +1,130 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/maps" as map;
+
+.home__hero {
+  background: url(../img/homebg.webp);
+  background-size: cover;
+  padding-top: 90px;
+  .container {
+    @include mixin.container(100px);
+    align-items: flex-start;
+    gap: 2.5em;
+    .hero__info {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      h2 {
+        @include mixin.h2();
+        font-size: 4em;
+      }
+      p {
+        &:nth-child(2) {
+          color: map-get(map.$color-palette, secondary-color);
+          font-weight: 900;
+        }
+        &:nth-child(3) {
+          font-weight: 900;
+          font-weight: 300;
+          max-width: 70%;
+          width: 500px;
+        }
+      }
+      .hero__buttons {
+        display: flex;
+        gap: 0.5em;
+        a {
+          width: 200px;
+          text-align: center;
+        }
+      }
+    }
+    .hero__img {
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+  @include mixin.notebook() {
+    .container {
+      @include mixin.container(100px);
+      flex-direction: column;
+      gap: 2.5em;
+      .hero__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        text-align: start;
+        h2 {
+          @include mixin.h2;
+        }
+        p {
+          font-size: 1em;
+          &:nth-child(2) {
+            color: map-get(map.$color-palette, secondary-color);
+            font-weight: 900;
+          }
+          &:nth-child(3) {
+            font-weight: 300;
+            max-width: 100%;
+          }
+        }
+        .hero__buttons {
+          display: flex;
+          gap: 0.5em;
+          a {
+            width: 100%;
+          }
+        }
+      }
+      .hero__img {
+        align-self: center;
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+  @include mixin.tablet() {
+    .container {
+      @include mixin.container(50px);
+      flex-direction: column;
+      gap: 2.5em;
+      .hero__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+        width: 100%;
+        h2 {
+          width: 100%;
+        }
+        p {
+          &:nth-child(2) {
+            color: map-get(map.$color-palette, secondary-color);
+            font-weight: 900;
+          }
+          &:nth-child(3) {
+            font-weight: 300;
+            max-width: 100%;
+          }
+        }
+        .hero__buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+          a {
+            width: 100%;
+          }
+        }
+      }
+      .hero__img {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

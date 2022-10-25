@@ -1,0 +1,30 @@
+@forward "../components/nav";
+@forward "../components/button";
+@forward "../components/menu-btn";
+@forward "../components/card-features";
+
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/variables" as v;
+@use "../abstracts/maps" as map;
+
+.header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0px 12px 24px -12px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 12px 24px -12px rgba(0, 0, 0, 0.1);
+  h1 {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/Logo_DiegoMaldonadoCode.png);
+    background-size: cover;
+    text-indent: -999999px;
+    overflow: hidden;
+  }
+  .container {
+    @include mixin.container(20px);
+    justify-content: space-between;
+    align-items: center;
+  }
+}

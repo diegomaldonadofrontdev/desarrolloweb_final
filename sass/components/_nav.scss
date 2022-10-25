@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/variables" as v;
+@use "../abstracts/maps" as map;
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 3em;
+  }
+  &__link {
+    position: relative;
+    a {
+      font-weight: 900;
+      color: map-get(map.$color-palette, text-color);
+    }
+    &::after {
+      content: "";
+      width: 0;
+      height: 4px;
+      background: map-get(map.$gradient-palette, primary-gradient);
+      position: absolute;
+      bottom: -10px;
+      border-radius: 20px;
+      right: 50%;
+      will-change: width;
+      transition: all 0.5s ease;
+    }
+    &:hover::after {
+      width: 100%;
+      right: 0;
+    }
+  }
+  @include mixin.notebook() {
+    position: absolute;
+    background-color: white;
+    top: 90px;
+    width: 100%;
+    height: 0;
+    right: 0;
+    visibility: hidden;
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+    &.active {
+      visibility: visible;
+      height: 100vh;
+    }
+    &__list {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+}

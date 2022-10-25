@@ -1,0 +1,27 @@
+@forward "./core/typography";
+@forward "./abstracts/variables";
+@forward "./abstracts/maps";
+@forward "./abstracts/mixins";
+@forward "./core/reset";
+
+@forward "./layout/header";
+@forward "./pages/home";
+@forward "./pages/team";
+@forward "./pages/events";
+@forward "./pages/contact";
+
+
+@forward "./layout/home-hero";
+@forward "./layout/home-features";
+@forward "./layout/home-promo";
+@forward "./layout/home-about";
+@forward "./layout/home-courses";
+@forward "./layout/main-nosotros";
+@forward "./layout/section-info";
+@forward "./layout/section-faqs";
+
+@forward "./layout/footer";
+
+body {
+  background-color: #f5f6fe;
+}
